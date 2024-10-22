@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETZ - Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        .navbar li {
+            margin-right: 20px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+        .navbar a:hover {
+            background-color: #555;
+            transition: background-color 0.3s;
+        }
+        .container {
+            padding: 20px;
+        }
+        .item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .item img {
+
+
+
+
+            max-width: 100%;
+            height: auto;
+            border-radius: 7px; /* Bordas arredondadas para imagens */
+        }
+        .search-container {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .search-input {
+            border: 1px solid #ccc;
+            border-radius: 20px 0 0 20px;
+            padding: 10px;
+            width: 300px; /* Aumente a largura da barra de pesquisa */
+            padding-left: 40px; /* Espaço para o ícone */
+            position: relative; /* Para posicionar o ícone */
+        }
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none; /* Para que o clique não interfira no campo de entrada */
+        }
+        .search-button {
+            background-color: #4CAF50;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 0 20px 20px 0;
+            color: white;
+        }
+        .search-button:hover {
+            background-color: #45a049;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        footer {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .comentario-form {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-field {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 80px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+         H1{font-size: larger;}
+         p{font-size: medium;}
+
+
+
+
+         .blog {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os posts se movam para a próxima linha */
+    gap: 20px; /* Espaçamento entre os posts */
+}
+
+
+.post {
+    flex: 1 1 300px; /* Permite que os posts cresçam e encolham com um tamanho mínimo de 300px */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Tamanho mínimo para manter a legibilidade */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+main {
+    padding: 20px;
+}
+
+
+.imagem-post {
+    max-width: 50%; /* Faz a imagem responsiva */
+    height: auto;    /* Mantém a proporção da imagem */
+    margin: 20px 0;  /* Espaçamento em cima e embaixo */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+    <header class="navbar">
+        <ul>
+            <li><a href="#Adoção">Adoção</a></li>
+            <li><a href="#Aquarismo">Aquarismo</a></li>
+            <li><a href="#Cães">Cães</a></li>
+            <li><a href="#Especies">Espécies</a></li>
+            <li><a href="#Bem-Estar">Bem-Estar</a></li>
+            <li><a href="#Posse  Responsável">Posse Responsável</a></li>
+            <li><a href="#Eventos Petz ">Eventos Petz</a></li>
+            <li><a href="#Dr pet">Dr pet</a></li>
+        </ul>
+    </header>
+
+
+
+
+    <div class="search-container">
+        <input type="text" placeholder="Busque no blog..." class="search-input">
+        <button class="search-button">Buscar</button>
+    </div>
+
+
+    <h1>Entenda os cuidados que deve ter com um pato de estimação!</h1>
+
+
+    <h5>Publicado em 10 de agosto de 2021</h5>
+
+
+    <h5>Tempo de leitura: 5min</h5>
+
+
+
+
+    <div class="container">
+        <div class="item">
+            <center><img src="https://deinetiere.com/wp-content/uploads/2018/10/die-haltung-von-enten-erfordert-wissen-und-leidenschaft.jpg" alt="Pato-doméstico"></center>
+            <p>Já pensou em ter um pato de estimação? Esse bichinho vem conquistando cada vez mais espaço nas casas e nos corações de todos, por isso, é importante entender todos os cuidados que se deve ter no dia a dia com um animalzinho tão diferente. Além disso, é preciso preparar o ambiente para receber o amiguinho.</p>
+        </div>
+        <div class="item">
+            <center><img src="https://www.mundoecologia.com.br/wp-content/uploads/2020/03/Filhote-de-Marreco-Pompom.jpg" alt="marreco com pompom"></center>
+             <p>Para te ajudar a entender tudo sobre o pato e como cuidar de um em casa, a equipe do Blog da Petz preparou um conteúdo cheio de dicas e informações. Prepare seu bloco e continue lendo para saber tudo sobre esse bichinho tão interessante.</p>
+
+
+
+
+            <h1>Pato: uma companhia alegre!</h1>
+
+
+
+
+            <p>A primeira coisa que você precisa aprender caso queira aderir a essa moda e ter um pato como animal de estimação é que ele é muito inteligente e ama socializar com todos ao seu redor. Por isso, uma atenção especial e constante é perfeita.</p>
+
+
+
+
+ 
+           <p>O animal consegue se comunicar bem e atender ao nome que for dado. Além disso, é interessante sempre adotar uma dupla. Por serem extremamente sociáveis, essas aves odeiam se sentir solitárias e, estando em par, poderão fazer companhia uma para a outra, caso você não esteja em casa.</p>
+           
+           <p>O pato de estimação adora brincar, e ter brinquedos para interagir com ele é diversão garantida! Além disso, sua inteligência permite que o tutor ensine truques incríveis, assim como se faz com cachorros, por exemplo. Viu só? Esse bichinho é uma ótima companhia, seja para crianças ou adultos!</p>
+ 
+ 
+            <h1>Cuidados com o ambiente onde o pato vai viver</h1>
+
+
+
+
+             <p>Para aprender como cuidar de um pato é importante pensar no ambiente. Você vai precisar de espaço num quintal, pois além de um cantinho para descanso, esses animais gostam de ter contato constante com a água, em algo que seja ou simule uma lagoa. Para isso, você pode utilizar uma piscina, por exemplo.</p>
+
+
+
+
+             <p>O espaço seco para o dia a dia precisa ser grande. Os patos gostam muito de caminhar com liberdade em seu lar. Além disso, deve ser um canto protegido de mudanças do clima e ataque de outros animais, caso seja uma área bem aberta.
+
+
+
+
+             </p>
+        </div>
+        <div class="item">
+            <img src="https://i.pinimg.com/originals/87/05/83/87058307cf1d8a159e72c4fabf6c1d01.jpg" alt="pato-mandarin">
+            <p>Para criar um pato de estimação no primeiro mês de vida, você precisa criar um ambiente quentinho. Materiais como papelão e palha são ideais, e é importante que o filhote não tenha contato com água nesse momento. Além disso, ele não pode ter convívio com o mundo exterior até completar pelo menos dois meses.</p>
+
+
+
+
+            <h1>Alimentação do pato</h1>
+
+
+
+
+            <p>Você já se perguntou o que o pato come? Esse é um conhecimento muito importante para quem quer ter um desses animais em casa. Separamos algumas dicas sobre o que dar nas refeições e a frequência com que elas devem acontecer. Assim, o bichinho cresce forte e saudável!</p>
+
+
+
+
+           <h1>O que dar para um pato</h1>
+
+
+
+
+           <p>A dieta do pato é muito variada, já que ele não é muito exigente. Você pode dar ração especializada, mas é preciso tomar cuidado com a quantidade, evitando engordar o animal. A alimentação em qualquer idade deve sempre balancear a ração e outros tipos de comida.</p>
+
+
+           <h1>Com qual frequência devo alimentar um pato?</h1>
+
+
+           <p>Para os adultos, o alimento deve estar em um local de fácil acesso durante todo o dia. Já um filhote deve ser alimentado até cinco vezes ao dia. É importante consultar o veterinário especializado sobre qual a comida de pato é ideal para cada idade e raça.</p>
+
+
+           <h1>Água</h1>
+
+
+          <p>Assim como a comida, o acesso à água bem fresquinha para consumo deve ser irrestrito. O bebedouro deve ser mais fundo, pois os patos afundam o bico para pegar o líquido. Tudo deve ser trocado diariamente ou sempre que houver muita sujeira. </p>
+
+
+          <h1>Cuidados com a saúde</h1>
+
+
+          <p>Existem alguns sinais que indicam que o bichinho pode estar doente. Ao observar alguns desses sintomas, leve o pato de estimação para o veterinário com urgência para que ele receba os cuidados que precisa.</p>
+
+
+          <p>Esses sinais podem aparecer na região do nariz, dos olhos e até na aparência das penas. Além disso, eles podem apresentar mudanças na hora de fazer as necessidades, com cores e consistências diferentes. Um comportamento alimentar e emocional incomum  também pode indicar doenças.</p>
+
+
+          <p>Um jeito de evitar esses problemas é fazer a limpeza constante do ambiente em que o pato de estimação fica. A lagoa, a área de descanso e a parte de alimentação devem estar sempre higienizados e com tudo fresquinho para que ele possa viver de maneira saudável.</p>
+
+
+          <h1>O pato no mundo da cultura pop</h1>
+
+
+          <p>A cultura pop ajudou a divulgar a moda do pato de estimação. Esse animal é bem presente em desenhos animados, por exemplo, com personagens que podem ser inspiração para o nome do bichinho. É só usar a criatividade e dar um título que o ajude a criar uma identidade e se sentir amado pelo tutor.</p>
+
+
+          <p>O universo da Disney tem vários nomes para um pato de estimação. Temos o Donald, que é o mau-humorado amigo de Mickey, e a Margarida, sua namorada. Os dois nomes são ótimas escolhas para quem tem um casal. Se você adotar irmãozinhos, pode colocar Huguinho, Zezinho e Luizinho, que são os trigêmeos sobrinhos de Donald.</p>
+
+
+          <p>Outro nome interessante inspirado nos desenhos é Patolino. Ele faz parte dos Looney Tunes, uma série animada popular. Seu melhor amigo é nada mais nada menos do que o Pernalonga, e os dois se metem em altas confusões juntos!
+
+
+          </p>
+
+
+
+
+        </div>
+        <div class="item">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHP9SGg1PJIaMK7bfQWdq0DkF1gfAJI_75XxtHNraFvCC3uadzWcLlw0nfglpOByR05igctnRZbme0FSZbz0anQ9IxEj6dWejBZcFjX9kl8uhBLLw7d_09d-lajNIkhpxZVFY5yeO2OrOl/s1600/pato-real+(5).JPG" alt="pato-real">
+            <p>Pronto! Agora que você entende tudo sobre como cuidar de um pato de estimação, aproveite para acessar o pet shop on-line da Petz! Temos vários produtos de qualidade  para cuidados com bichinhos. Se quiser, pode visitar nossas lojas físicas e contar com o atendimento dos nossos funcionários. Estamos aqui para te ajudar!</p>
+           
+            <h1>PETZ</h1>
+            <P>Aqui você encontra tudo sobre o mundo animal e fica por dentro dos cuidados essenciais com o seu pet.</P>
+        </div>
+    </div>
+
+
+    <section class="s-categorias-padrao">
+        <div class="container">
+
+
+            <h2 class="titulo">
+                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.1701 0.559999C19.4533 0.436533 18.7274 0.37298 18.0001 0.369999C15.5184 0.367965 13.0886 1.07957 11.0001 2.42C8.90623 1.09717 6.47674 0.40303 4.00008 0.419999C3.27273 0.42298 2.54689 0.486533 1.83008 0.609999C1.59529 0.650478 1.38267 0.773458 1.2305 0.956792C1.07833 1.14013 0.996621 1.37177 1.00008 1.61V13.61C0.997943 13.7569 1.02821 13.9025 1.08873 14.0364C1.14926 14.1703 1.23855 14.2893 1.35026 14.3847C1.46197 14.4802 1.59334 14.5499 1.73504 14.5888C1.87674 14.6278 2.02528 14.635 2.17008 14.61C3.6031 14.3619 5.07129 14.4031 6.48815 14.7311C7.90501 15.0591 9.24191 15.6674 10.4201 16.52L10.5401 16.59H10.6501C10.761 16.6362 10.8799 16.66 11.0001 16.66C11.1202 16.66 11.2392 16.6362 11.3501 16.59H11.4601L11.5801 16.52C12.75 15.6483 14.0831 15.0203 15.5002 14.6734C16.9174 14.3264 18.3897 14.2674 19.8301 14.5C19.9749 14.525 20.1234 14.5178 20.2651 14.4788C20.4068 14.4399 20.5382 14.3702 20.6499 14.2747C20.7616 14.1793 20.8509 14.0603 20.9114 13.9264C20.972 13.7925 21.0022 13.6469 21.0001 13.5V1.5C20.9897 1.27215 20.9017 1.05471 20.7507 0.883737C20.5998 0.712764 20.3949 0.598536 20.1701 0.559999ZM10.0001 13.85C8.14997 12.8767 6.0906 12.3687 4.00008 12.37C3.67008 12.37 3.34008 12.37 3.00008 12.37V2.37C3.33314 2.3508 3.66703 2.3508 4.00008 2.37C6.13347 2.36764 8.2203 2.99369 10.0001 4.17V13.85ZM19.0001 12.41C18.6601 12.41 18.3301 12.41 18.0001 12.41C15.9096 12.4087 13.8502 12.9167 12.0001 13.89V4.17C13.7799 2.99369 15.8667 2.36764 18.0001 2.37C18.3331 2.3508 18.667 2.3508 19.0001 2.37V12.41ZM20.1701 16.56C19.4533 16.4365 18.7274 16.373 18.0001 16.37C15.5184 16.368 13.0886 17.0796 11.0001 18.42C8.9116 17.0796 6.48172 16.368 4.00008 16.37C3.27273 16.373 2.54689 16.4365 1.83008 16.56C1.69991 16.5807 1.57511 16.6268 1.46285 16.6959C1.35059 16.765 1.25309 16.8555 1.17595 16.9624C1.09882 17.0693 1.04357 17.1903 1.01339 17.3186C0.983207 17.4469 0.978686 17.5799 1.00008 17.71C1.0509 17.9697 1.20257 18.1986 1.42188 18.3467C1.64118 18.4948 1.91022 18.5499 2.17008 18.5C3.6031 18.2519 5.07129 18.2931 6.48815 18.6211C7.90501 18.9491 9.24191 19.5574 10.4201 20.41C10.5894 20.5306 10.7922 20.5954 11.0001 20.5954C11.208 20.5954 11.4107 20.5306 11.5801 20.41C12.7583 19.5574 14.0952 18.9491 15.512 18.6211C16.9289 18.2931 18.3971 18.2519 19.8301 18.5C20.0899 18.5499 20.359 18.4948 20.5783 18.3467C20.7976 18.1986 20.9493 17.9697 21.0001 17.71C21.0215 17.5799 21.017 17.4469 20.9868 17.3186C20.9566 17.1903 20.9014 17.0693 20.8242 16.9624C20.7471 16.8555 20.6496 16.765 20.5373 16.6959C20.4251 16.6268 20.3003 16.5807 20.1701 16.56Z" fill="#1D1D1D"/>
+</svg>
+                Mais no blog
+            </h2>
+
+
+        </div>
+
+
+        <div class="swiper swiper-categorias-padrao visible-desktop">
+            <div class="swiper-wrapper">
+
+
+               
+                    <div class="swiper-slide">
+                        <div class="post-categoria-padrao">
+                            <a href="https://www.petz.com.br/blog/bem-estar/como-montar-um-aquario/">
+                                <div data-bg="https://www.petz.com.br/blog/wp-content/uploads/2017/02/como-montar-um-aquario-interna2.jpg" class="img rocket-lazyload" style=""></div>
+                            </a>
+                            <div class="info">
+                                <div class="tags-post">
+     
+                                   
+                                    <section class="blog">
+                                        <article class="post">
+
+
+<img src="https://www.petz.com.br/blog/wp-content/uploads/2019/09/furao-pra-adocao.jpg" alt="furão" class="imagem-post"
+
+
+                                            <h1>Nomes para furão com cara de pet! </h2>
+                               
+                               
+                                            <p>Escolher nomes para furão não é uma tarefa fácil, já que este animal de estimação[...]</p>
+                               
+                               
+                                            <p class="data">21 de outubro de 2024</p>
+                               
+                               
+                                            <a href="#" class="ler-mais">Leia mais</a>
+                                        </article>
+                               
+                               
+                                        <article class="post">
+                                            <img src="https://mcveterinaria.com/wp-content/uploads/2016/02/potro-neonato-sano-1170x878.jpg" alt="potro" class="imagem-post">
+                                            <h2>O que é potro e como cuidar?</h2>
+                                            <p>Ás vezes,os diferentes animais espalhados pelo planeta tem nomes curiosos e intrigantes.Nem sempre[...]</p>
+                               
+                               
+                               
+                               
+                                            <a href="#" class="ler-mais">Leia mais</a>
+                                        </article>
+                               
+                               
+                                        <!-- Adicione mais posts conforme necessário -->
+                                    </section>
+                                </body>
+                               
+
+
+                                       
+                               
+                               
+                                       
+                                                                   
+                                                                       
+
+
+
+
+
+
+
+
+
+
+
+
+    <h1>Deixe um Comentário</h1>
+    <div class="comentario-form">
+        <div class="form-field">
+            <label for="comentario">Comentário</label>
+            <textarea id="comentario" placeholder="Escreva seu comentário..."></textarea>
+        </div>
+        <div class="form-field">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Seu nome">
+        </div>
+        <div class="form-field">
+            <label for="email">E-mail*</label>
+            <input type="email" id="email" placeholder="Seu e-mail" required>
+        </div>
+        <div class="form-field">
+            <label>
+                <input type="checkbox" id="salvarDados"> Salvar meus dados neste navegador para a próxima vez que eu comentar.
+            </label>
+        </div>
+        <button onclick="enviarComentario()">Comentar</button>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        function enviarComentario() {
+            const comentario = document.getElementById('comentario').value;
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+
+
+
+
+
+
+
+
+            if (comentario.trim() === "" || email.trim() === "") {
+                alert("Por favor, preencha todos os campos obrigatórios.");
+                return;
+            }
+
+
+
+
+
+
+
+
+            // Aqui você pode adicionar lógica para enviar os dados, se necessário
+
+
+
+
+
+
+
+
+            alert("Comentário enviado com sucesso!");
+            document.getElementById('comentario').value = '';
+            document.getElementById('nome').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('salvarDados').checked = false; // Limpa a checkbox
+        }
+    </script>
+
+
+
+
+     <h1>PRODUTOS PARA CACHORRO</h1>
+
+
+
+
+
+
+
+
+     <P>Ração seca</P>
+
+
+
+
+     <P>Ração úmida</P>
+
+
+
+
+     <P>Medicamentos</P>
+
+
+
+
+     <p>Tapete higiênico</p>
+
+
+
+
+
+
+
+
+     <h1>PRODUTO PARA GATO</h1>
+
+
+
+
+
+
+
+
+     <P>Ração seca</P>
+
+
+
+
+     <P>Ração úmida</P>
+     
+     <P>Antipugas</P>
+
+
+     <p>Caixa de areia</p>
+
+
+
+
+     <h1>Produtos para outros pets</h1>
+
+
+     <p>Ração para hamster</p>
+
+
+     <p>Ração para pássaros</p>
+
+
+     <p>Ração para peixes</p>
+
+
+     <p>Ração para tartaruga</p>
+
+
+
+
+
+
+     <H1>Redes socias</H1>
+
+
+
+
+     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu Site</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="styles.css"> <!-- seu arquivo CSS -->
+    </head>
+    <body>
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/seu_usuario" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/seu_usuario" target="_blank" class="icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/seu_usuario" target="_blank" class="icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/c/seu_usuario" target="_blank" class="icon"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@seu_usuario" target="_blank" class="icon"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.pinterest.com/seu_usuario" target="_blank" class="icon"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </footer>
+    </body>
+   
+
+
+     
+     
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <p>Copyright ©2023 www.petz.com.br/blog é uma iniciativa da Petz®
+            Powered by</p>
+        <p>Powered by</p>
+        <p>Agência Especializada em SEO</p>
+        <nav>
+         
+        </nav>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
